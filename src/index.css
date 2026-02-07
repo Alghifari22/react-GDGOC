@@ -97,29 +97,56 @@ body {
   color: var(--text-primary);
   width: 100%;
 }
-.btn-edit {
-  background-color: var(--accent-color);
-  width: 60px;
-  padding: 2px 12px;
-  border-radius: 4px;
-  color: white;
+.btn-group {
+  display: flex;
+  gap: 6px;
 }
-.btn-edit:hover { 
-  cursor:pointer;
-  background-color:rgb(9, 44, 215);
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
-.btn-delete {
-  background-color: red;
-  width: 70px;
-  padding: 2px 12px;
-  border-radius: 4px;
-  color: white;
+.icon-btn svg {
+  font-size: 18px;
 }
-.btn-delete:hover { 
-  cursor:pointer;
-  background-color:rgb(142, 4, 4);
+.icon-btn:active {
+  transform: scale(0.9);
 }
-
+/* DONE */
+.icon-btn.done {
+  color: #2ecc71;
+}
+.icon-btn.done:hover {
+  background-color: rgba(46, 204, 113, 0.15);
+}
+/* EDIT */
+.icon-btn.edit {
+  color: var(--accent-color);
+}
+.icon-btn.edit:hover {
+  background-color: rgba(66, 133, 244, 0.15);
+}
+/* DELETE */
+.icon-btn.delete {
+  color: #e74c3c;
+}
+.icon-btn.delete:hover {
+  background-color: rgba(231, 76, 60, 0.15);
+}
+.todo-done span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.todo-done {
+  border-left-color: #2ecc71;
+}
 .input-group {
   display: flex;
   gap: 10px;
